@@ -2,6 +2,7 @@ package com.webonline.core.servlets;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.webonline.core.model.AccessToken;
 import java.lang.reflect.Type;
 import com.webonline.core.model.Categoria;
 import java.io.IOException;
@@ -23,13 +24,13 @@ public class ServletCategorias extends HttpServlet {
     public void doPost(HttpServletRequest peticion, HttpServletResponse respuesta) throws ServletException, IOException {
         RequestDispatcher despachador = null;
         HttpSession sesion = peticion.getSession();
-      //  AccessToken token = (AccessToken) sesion.getAttribute("token");
+        AccessToken token = (AccessToken) sesion.getAttribute("token");
         URL url = new URL("http://ec2-18-222-247-158.us-east-2.compute.amazonaws.com:9200/api/v1/categorias");
         HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
         conexion.setRequestMethod("GET");
         conexion.setRequestProperty("Accept", "application/json");
 
-      //  conexion.setRequestProperty("Authorization", "Bearer ".concat(token.getAccessToken()));
+        conexion.setRequestProperty("Authorization", "Bearer ".concat(token.getAccessToken()));
 
         if (conexion.getResponseCode() != 200) {
             throw new RuntimeException("Failed: HTTP 1.1 Error code ".concat(String.valueOf(conexion.getResponseCode())));

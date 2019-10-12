@@ -21,4 +21,14 @@
         <servlet-name>ServletTiposEmpaque</servlet-name>
         <url-pattern>/ServletTiposEmpaque.do</url-pattern>
     </servlet-mapping>
+    
+       <servlet>
+        <servlet-name>ServletAutenticar</servlet-name>
+        <servlet-class>com.webonline.core.servlets.ServletAutenticar</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletAutenticar</servlet-name>
+        <url-pattern>/ServletAutenticar.do</url-pattern>
+    </servlet-mapping>
+    
 </web-app>

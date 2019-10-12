@@ -4,8 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/marlon/proyectos/netbeans/WebOnline/web/WEB-INF/web.xml</file>
+            <file>file:/home/marlon/proyectos/netbeans/WebOnline/src/java/com/webonline/core/servlets/ServletAutenticar.java</file>
+            <file>file:/home/marlon/proyectos/netbeans/WebOnline/src/java/com/webonline/core/servlets/ServletTiposEmpaque.java</file>
             <file>file:/home/marlon/proyectos/netbeans/WebOnline/src/java/com/webonline/core/servlets/ServletCategorias.java</file>
-            <file>file:/home/marlon/proyectos/netbeans/WebOnline/nbproject/build-impl.xml</file>
         </group>
     </open-files>
 </project-private>
